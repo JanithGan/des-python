@@ -1,9 +1,9 @@
 ROUNDS = 1  # NOTE_1 - Change this to 16 for correct DES
 
-OTHER = 0
+DEFAULT = 0
 SBOX1_ONLY = 1  # For 2020 Past Paper
 
-mode = SBOX1_ONLY   # NOTE_2 - Change this to OTHER for correct DES
+mode = SBOX1_ONLY   # NOTE_2 - Change this to DEFAULT for correct DES
 
 pt = "1701456789ABCDEF"     # HEX
 key = "1701456789ABCDEF"    # Hex
