@@ -232,6 +232,7 @@ def encrypt(pt, rkb):
     pt = hex2bin(pt)
 
     # Initial permutation
+    print_bin(pt, "Before IP")
     pt = permute(pt, initial_perm, 64)
     print_bin(pt, "Initial Permutation")
     print()
@@ -271,7 +272,6 @@ def encrypt(pt, rkb):
 
         # Straight D-box: After substituting rearranging the bits
         sbox_str = permute(sbox_str, per, 32)
-
         print_bin(sbox_str, "After Permutation")
 
         # XOR left and sbox_str
