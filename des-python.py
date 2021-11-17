@@ -1,9 +1,9 @@
-ROUNDS = 16  # NOTE_1 - Change this to 16 for correct DES
+ROUNDS = 1  # NOTE_1 - Change this to 16 for correct DES
 
 OTHER = 0
 SBOX1_ONLY = 1  # For 2020 Past Paper
 
-mode = OTHER   # NOTE_2 - Change this to OTHER for correct DES
+mode = SBOX1_ONLY   # NOTE_2 - Change this to OTHER for correct DES
 
 pt = "1701456789ABCDEF"     # HEX
 key = "1701456789ABCDEF"    # Hex
@@ -365,7 +365,7 @@ for i in range(0, ROUNDS):
 print("\nENCRYPTION\n==========\n")
 cipher_text = bin2hex(encrypt(pt, rkb))
 
-print("\n\nDECRYPTION\n==========\n")
+print("\nDECRYPTION\n==========\n")
 rkb_rev = rkb[::-1]
 rk_rev = rk[::-1]
 text = bin2hex(encrypt(cipher_text, rkb_rev))
